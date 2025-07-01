@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah Indonesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <style>
+    .lightbox-bg {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .lightbox-img {
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+  </style>
+  <script>
+    function openLightbox(src) {
+      const modal = document.getElementById('lightboxModal');
+      const modalImg = document.getElementById('lightboxImage');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+    function closeLightbox() {
+      document.getElementById('lightboxModal').style.display = 'none';
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- Header -->
+  <header class="bg-red-700 text-white p-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Sejarah Indonesia</h1>
+      <nav class="space-x-4">
+        <a href="#kerajaan" class="hover:underline">Kerajaan</a>
+        <a href="#penjajahan" class="hover:underline">Penjajahan</a>
+        <a href="#kemerdekaan" class="hover:underline">Kemerdekaan</a>
+        <a href="#reformasi" class="hover:underline">Reformasi</a>
+      <a href="#galeri" class="hover:underline">Galeri Foto</a></nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-[60vh] flex items-center justify-center text-white text-center" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Proklamasi_17_Agustus_1945.jpg');">
+    <div class="bg-black bg-opacity-50 p-6 rounded-xl">
+      <h2 class="text-4xl font-bold mb-2">Perjalanan Panjang Bangsa</h2>
+      <p class="text-lg">Dari kerajaan kuno hingga era modern</p>
+    </div>
+  </section>
+
+  <!-- Konten -->
+  <main class="container mx-auto px-4 py-8 space-y-16">
+    <!-- Kerajaan -->
+    <section id="kerajaan">
+      <h2 class="text-3xl font-bold mb-4">Zaman Kerajaan</h2>
+      <p class="mb-4">Indonesia memiliki banyak kerajaan besar seperti Sriwijaya, Majapahit, dan Mataram yang berjaya di Asia Tenggara.</p>
+      <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/5/57/Candi_Borobudur_Temple.jpg" alt="Candi Borobudur" class="rounded-xl shadow-md w-full max-w-3xl mx-auto">
+    </section>
+
+    <!-- Penjajahan -->
+    <section id="penjajahan">
+      <h2 class="text-3xl font-bold mb-4">Masa Penjajahan</h2>
+      <p class="mb-4">Selama lebih dari 350 tahun, bangsa Indonesia dijajah oleh Portugis, Belanda, dan Jepang.</p>
+      <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Dutch_colonial_soldiers_in_Indonesia.jpg" alt="Penjajahan Belanda" class="rounded-xl shadow-md w-full max-w-3xl mx-auto">
+    </section>
+
+    <!-- Kemerdekaan -->
+    <section id="kemerdekaan">
+      <h2 class="text-3xl font-bold mb-4">Proklamasi Kemerdekaan</h2>
+      <p class="mb-4">Pada 17 Agustus 1945, Indonesia memproklamasikan kemerdekaannya oleh Soekarno dan Hatta.</p>
+      <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Proklamasi_Kemerdekaan_Indonesia_17_Agustus_1945.jpg" alt="Proklamasi Kemerdekaan" class="rounded-xl shadow-md w-full max-w-3xl mx-auto">
+    </section>
+
+    <!-- Reformasi -->
+    <section id="reformasi">
+      <h2 class="text-3xl font-bold mb-4">Era Reformasi</h2>
+      <p class="mb-4">Tahun 1998 menjadi awal Era Reformasi setelah runtuhnya Orde Baru dan berakhirnya pemerintahan Soeharto.</p>
+      <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Soeharto_resigns.jpg" alt="Reformasi 1998" class="rounded-xl shadow-md w-full max-w-3xl mx-auto">
+    </section>
+
+  <!-- Galeri Foto -->
+<section id="galeri">
+  <h2 class="text-3xl font-bold mb-6">Galeri Foto Sejarah</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Indonesia_1945.jpg" alt="Rakyat Indonesia 1945" class="rounded shadow-md">
+    <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Sukarno_and_Hatta_Proclamation.jpg" alt="Soekarno-Hatta" class="rounded shadow-md">
+    <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Angkatan_45.jpg" alt="Angkatan 45" class="rounded shadow-md">
+    <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Indonesian_students_demonstrating_1998.jpg" alt="Demonstrasi 1998" class="rounded shadow-md">
+    <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Sumpah_Pemuda_1928.jpg" alt="Sumpah Pemuda" class="rounded shadow-md">
+    <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sukarno_Hatta_Proklamasi.jpg" alt="Proklamasi Kemerdekaan" class="rounded shadow-md">
+
+    <!-- Tambahan Gambar Baru -->
+    <img src="https://rezaa11-arch.github.io/sejarah-indonesia/assets/rakyat-indonesia-gedung-1945.jpg"
+         alt="Rakyat Indonesia 1945 di Gedung Proklamasi"
+         onclick="openLightbox(this.src)"
+         class="cursor-pointer transition-transform hover:scale-105 rounded shadow-md">
+  </div>
+    
+      <!-- Modal Lightbox -->
+      <div id="lightboxModal" onclick="closeLightbox()" class="fixed top-0 left-0 w-full h-full hidden items-center justify-center lightbox-bg z-50">
+        <img onclick="openLightbox(this.src)" class="cursor-pointer transition-transform hover:scale-105" id="lightboxImage" class="lightbox-img rounded shadow-lg" />
+      
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rakyat_Indonesia_1945.jpg" alt="Rakyat Indonesia 1945" class="cursor-pointer transition-transform hover:scale-105 rounded shadow-md" onclick="openLightbox(this.src)">
+
+      </div>
+    </section>
+    </main>
+
+  <!-- Tombol Ke Atas -->
+  <div class="fixed bottom-5 right-5">
+    <a href="#top" class="bg-red-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-700 transition">↑ Ke Atas</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-16 text-center">
+    <p>&copy; 2025 Sejarah Indonesia | Dibuat oleh Generasi Bangsa</p>
+  </footer>
+</body>
+</html>
